@@ -60,11 +60,20 @@ table {
 /* --------------------GLOBAL STYLES (mobile first/small) --------------------*/
 
 html {
+    background-color:rgba(122, 191, 191, .5);
+}
 
+body {
+	background-color: #F2F2F2;
+    min-width: 428px;
 }
 
 header {
+	background-color: #F2F2F2;
+}
 
+menu {
+	display:flex;
 }
 
 menu li {
@@ -72,16 +81,24 @@ menu li {
     font-weight: 400;
     font-style: normal;
     font-size: 20px;
+    list-style: none;
+}
+
+header img {
+	max-width: 100%;
 }
 
 h1, h2, h3{
 	font-family: "Bebas Neue", serif;
     font-weight: 400;
     font-style: normal;
+    text-align: center;
+    padding: 1rem;
 }
 
 h1 {
 	font-size: 40px;
+    text-align: center;
 }
 
 h2 {
@@ -94,15 +111,14 @@ h3 {
 
 p {
 	font-family: "Montserrat", serif;
-    font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
     font-size: 16px;
+    padding: 0.5rem;
 }
 
 dt {
     font-family: "Montserrat", serif;
-    font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
     font-size: 16px;
@@ -110,7 +126,6 @@ dt {
 
 dd {
 	font-family: "Montserrat", serif;
-    font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
 	font-size: 16px;
@@ -118,28 +133,100 @@ dd {
 
 li {
 	font-family: "Montserrat", serif;
-    font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
 	font-size: 16px;
 }
 
 main {
+	background-color: #F2F2F2;
+}
 
+#details, #ingredients, #directions {
+	padding: 0.5rem
+}
+
+#details dl {
+	display: flex;
+    flex-wrap: wrap;
+}
+
+#details dt {
+	  width: 33%;
+}
+
+#details dd {
+	margin-left: auto;
+    width: 66%;
+}
+
+#ingredients ul {
+	list-style: disc;
+	list-style-position: inside;
+}
+
+#directions {
+	margin: 1rem;
+}
+
+#directions ol {
+	list-style: auto;
+	list-style-position: outside;
 }
 
 aside {
+	background-color: #7ABFBF;
+}
 
+aside h4 {
+    display: none;
+}
+
+#rice, #salsa, #guacamole, #tortillas {
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+    padding: 1rem;
+}
+
+#rice img, #salsa img, #guacamole img, #tortillas img {
+	grid-column-start:1;
+    width: 150px;
+}
+
+#ricerating, #salsarating, #guacrating, #tortrating {
+	grid-column-start:2;
+	grid-row-start: 1;
+    position:relative;
+    top:110px;
+    left: 15px;
+}
+
+#sdishes h3 {
+	grid-column-start:2;
+	grid-row-start:1;
+	text-align:left;
+}
+
+#sdishes p {
+	grid-column-start:2;
+	grid-row-start:1;
+	position:relative;
+	top:60px;
+    left: 8px;
 }
 
 nav {
-    position:fixed;
-	top:0;
+    display: flex;
+    position: fixed;
+	top: 0;
 	font-family: "Montserrat", serif;
-    font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
 	font-size: 16px;
+}
+
+nav h2 {
+	display: none;
 }
 
 nav a {
@@ -154,8 +241,27 @@ nav span {
     font-weight: 400;
     font-style: normal;
     font-size: 20px;
+    display: flex;
+	flex-direction: column;
 }
 
+nav li:first-child {
+    background-color: #EB5428;
+}
+
+nav li img{
+	display:none;
+}
+
+#sign-in {
+	display:flex;
+	position:absolute;
+	top:0;
+}
+
+#social {
+	background-color: #F2F2F2;
+}
 
 #social li {
     font-family: "Bebas Neue", serif;
@@ -164,23 +270,29 @@ nav span {
     font-size: 20px;
 }
 
+#social h2, footer h2, footer h3 {
+	display: none;
+}
+
 input {
 	font-family: "Montserrat", serif;
-    font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
 	font-size: 16px;
 }
 
 footer {
+    background-color: #F2F2F2;
     font-family: "Bebas Neue", serif;
     font-weight: 400;
     font-style: normal;
     font-size: 20px;
 }
 /*-------------------- MEDIA QUERY (medium) --------------------------------*/
+@media screen and (min-width:768px) {
 
-
+}
 /*-------------------- MEDIA QUERY (large) ------------------------------------*/
+@media screen and (min-width:1280px) {
 
-
+}
