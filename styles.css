@@ -65,15 +65,23 @@ html {
 
 body {
 	background-color: #F2F2F2;
-    min-width: 428px;
+    min-width: 414px;
+    margin-left: 2rem;
+	margin-right: 2rem;
 }
 
 header {
 	background-color: #F2F2F2;
+	padding-top:8rem;
 }
 
 menu {
 	display:flex;
+	position:relative;
+	left: 70px;
+    padding-top:70px;
+    padding-top:90px;
+	padding-bottom: 10px;
 }
 
 menu li {
@@ -82,6 +90,21 @@ menu li {
     font-style: normal;
     font-size: 20px;
     list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+button, input[type="submit"]{
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+    display: flex;
+	flex-direction: column-reverse;
+    color: #EB5428;
 }
 
 header img {
@@ -99,6 +122,8 @@ h1, h2, h3{
 h1 {
 	font-size: 40px;
     text-align: center;
+    position: relative;
+	top: 100px;
 }
 
 h2 {
@@ -216,51 +241,110 @@ aside h4 {
 }
 
 nav {
-    display: flex;
+    grid-area: nav;
+    min-width: 414px;
+    background-color: #ffffff;
+    box-shadow: 0px 3px 3px #bbb;
     position: fixed;
-	top: 0;
+    top: 0;
+    z-index:5;
 	font-family: "Montserrat", serif;
     font-weight: 400;
     font-style: normal;
-	font-size: 16px;
+	font-size:16px;
+    width: 88%;
 }
 
-nav h2 {
-	display: none;
+nav ul {
+    grid-area: hamberger;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    overflow: hidden;
+    max-height: 0;
 }
-
-nav a {
+nav li img {
+    display: none;
+}
+nav li a {
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+}
+nav a{
     font-family: "Bebas Neue", serif;
     font-weight: 400;
     font-style: normal;
     font-size: 20px;
 }
 
+nav label {
+    cursor: pointer;
+    display: inline-block;
+    user-select: none;
+    position: relative;
+    bottom: 5px;
+    left: 30px;
+}
 nav span {
-    font-family: "Bebas Neue", serif;
+    display: block;
+    position: relative;
+	font-family: "Bebas Neue", serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 20px;
-    display: flex;
-	flex-direction: column;
+	font-size: 20px;
 }
 
-nav li:first-child {
-    background-color: #EB5428;
+nav label svg {
+    display: block;
+}
+label span:before, label span:after {
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+nav input {
+    display: none;
+}
+nav input:checked ~ ul {
+    max-height: 550px;
+}
+nav h2 {
+    visibility: hidden;
+    height: 1px;
+    width: 1px;
 }
 
-nav li img{
-	display:none;
+nav li:last-child {
+	position: absolute;
+	top:0;
+	right:0;
+}
+
+#logo {
+	position: absolute;
+	background-color:#EB5428;
+	top:0;
+	right:150px;
+	height: 53px;
 }
 
 #sign-in {
-	display:flex;
-	position:absolute;
+	display: block;
 	top:0;
+    color:#0D0D0D;
+    text-decoration: none;
 }
 
 #social {
 	background-color: #F2F2F2;
+}
+
+#social ul {
+	display: flex;
+	padding: 1rem;
 }
 
 #social li {
@@ -268,10 +352,17 @@ nav li img{
     font-weight: 400;
     font-style: normal;
     font-size: 20px;
+    color:#EB5428;
 }
 
 #social h2, footer h2, footer h3 {
 	display: none;
+}
+
+form {
+	position: absolute;
+	top: 150px;
+	left: 150px;
 }
 
 input {
@@ -288,6 +379,11 @@ footer {
     font-style: normal;
     font-size: 20px;
 }
+
+footer img {
+	width:60%;
+}
+
 /*-------------------- MEDIA QUERY (medium) --------------------------------*/
 @media screen and (min-width:768px) {
 
