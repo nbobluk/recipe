@@ -78,8 +78,7 @@ header {
 menu {
 	display:flex;
 	position:relative;
-	left: 70px;
-    padding-top:70px;
+	left:30px;
     padding-top:90px;
 	padding-bottom: 10px;
 }
@@ -107,6 +106,20 @@ button, input[type="submit"]{
     color: #EB5428;
 }
 
+menu button {
+    transition: all ease-in-out 0.2s;
+}
+
+menu button:hover {
+    background-color: #EB5428;
+	border-radius: 5px;
+}
+
+
+menu :hover {
+	color: white;
+}
+
 header img {
 	max-width: 100%;
 }
@@ -123,7 +136,7 @@ h1 {
 	font-size: 40px;
     text-align: center;
     position: relative;
-	top: 100px;
+	top: 80px;
 }
 
 h2 {
@@ -240,6 +253,14 @@ aside h4 {
     left: 8px;
 }
 
+#rice, #salsa, #guacamole, #tortillas {
+    transition: all ease-in-out 0.2s;
+}
+
+#rice:hover, #salsa:hover, #guacamole:hover, #tortillas:hover {
+	background-color:#EB5428;
+}
+
 nav {
     grid-area: nav;
     min-width: 414px;
@@ -327,7 +348,7 @@ nav li:last-child {
 	position: absolute;
 	background-color:#EB5428;
 	top:0;
-	right:150px;
+	right: 150px;
 	height: 53px;
 }
 
@@ -342,9 +363,19 @@ nav li:last-child {
 	background-color: #F2F2F2;
 }
 
+#social button {
+    transition: all ease-in-out 0.2s;
+}
+
+#facebook:hover, #instagram:hover, #youtube:hover, #tiktok:hover {
+	color:#F2F2F2;
+	background-color:#EB5428;
+	border-radius: 5px;
+}
+
 #social ul {
 	display: flex;
-	padding: 1rem;
+	justify-content:center;
 }
 
 #social li {
@@ -353,16 +384,21 @@ nav li:last-child {
     font-style: normal;
     font-size: 20px;
     color:#EB5428;
+    padding: 0.5rem;
 }
 
 #social h2, footer h2, footer h3 {
-	display: none;
+	visibility:hidden;
 }
 
 form {
 	position: absolute;
 	top: 150px;
-	left: 150px;
+	left: 140px;
+}
+
+#search {
+	display: flex;
 }
 
 input {
@@ -378,10 +414,21 @@ footer {
     font-weight: 400;
     font-style: normal;
     font-size: 20px;
+    padding-bottom: 3rem;
 }
 
 footer img {
-	width:60%;
+	width: 60%;
+	position: relative;
+	left: 100px;
+	bottom: 40px;
+}
+
+small {
+	position: relative;
+	top:290px;
+    left: 90px;
+	padding: 1rem;
 }
 
 /*-------------------- MEDIA QUERY (medium) --------------------------------*/
